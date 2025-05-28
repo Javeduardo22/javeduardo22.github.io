@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mis Enlaces</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       background-color: #121212;
       color: #ffffff;
@@ -13,33 +16,58 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
+      padding: 2rem 1rem;
       margin: 0;
+      min-height: 100vh;
     }
     h1 {
       margin-bottom: 2rem;
       font-size: 2rem;
+      text-align: center;
     }
     .link {
       display: flex;
       align-items: center;
       background-color: #1e1e1e;
-      padding: 1rem 2rem;
-      margin: 1rem 0;
-      border-radius: 8px;
+      padding: 1rem;
+      margin: 0.8rem 0;
+      border-radius: 10px;
       text-decoration: none;
       color: #ffffff;
-      transition: background-color 0.3s;
-      width: 300px;
+      transition: background-color 0.3s, transform 0.2s;
+      width: 100%;
+      max-width: 400px;
     }
     .link:hover {
-      background-color: #333333;
+      background-color: #2a2a2a;
+      transform: translateY(-2px);
     }
     .link img {
-      width: 40px;
-      height: 40px;
+      width: 48px;
+      height: 48px;
       border-radius: 50%;
       margin-right: 1rem;
+      flex-shrink: 0;
+    }
+    .link span {
+      font-size: 1.2rem;
+      flex-grow: 1;
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+      .link {
+        padding: 0.8rem;
+      }
+      .link img {
+        width: 40px;
+        height: 40px;
+      }
+      .link span {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
@@ -47,11 +75,11 @@
   <h1>📲 Descubre más</h1>
   <a class="link" href="https://www.instagram.com/bloombite.rd?igsh=MXNtcWNhd3FwcnRocw==" target="_blank">
     <img src="bloombite.jpg" alt="Bloom Bite RD Logo" />
-    🌸 Bloom Bite RD
+    <span>🌸 Bloom Bite RD</span>
   </a>
   <a class="link" href="https://www.instagram.com/cafeconcalvo?igsh=MWh0dmpjcXl6NnB5OQ%3D%3D&utm_source=qr" target="_blank">
     <img src="cafeconcalvo.png" alt="Cafe con Calvo Logo" />
-    ☕ Cafe con Calvo
+    <span>☕ Cafe con Calvo</span>
   </a>
 </body>
 </html>
