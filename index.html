@@ -1,16 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mis Enlaces</title>
+  <title>Support My Work</title>
   <style>
-    .link span {
-  font-size: 1.2rem;
-  flex-grow: 1;
-  display: flex;
-  align-items: center;  /* Vertically centers the text */
-}
     * {
       box-sizing: border-box;
     }
@@ -26,25 +20,35 @@
       min-height: 100vh;
     }
     h1 {
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
       font-size: 2rem;
       text-align: center;
     }
-  .link {
-  display: flex;
-  align-items: center; /* ensures vertical alignment */
-  justify-content: flex-start;
-  background-color: #1e1e1e;
-  padding: 1rem;
-  margin: 0.8rem 0;
-  border-radius: 10px;
-  text-decoration: none;
-  color: #ffffff;
-  transition: background-color 0.3s, transform 0.2s;
-  width: 100%;
-  max-width: 400px;
-  line-height: 1.2; /* helps with vertical alignment */
-}
+    .tip-container {
+      margin: 2rem 0;
+      width: 100%;
+      max-width: 400px;
+      display: flex;
+      justify-content: center;
+    }
+    .section-title {
+      margin: 2rem 0 1rem;
+      font-size: 1.5rem;
+      color: #ccc;
+    }
+    .link {
+      display: flex;
+      align-items: center;
+      background-color: #1e1e1e;
+      padding: 1rem;
+      margin: 0.5rem 0;
+      border-radius: 10px;
+      text-decoration: none;
+      color: #ffffff;
+      transition: background-color 0.3s, transform 0.2s;
+      width: 100%;
+      max-width: 400px;
+    }
     .link:hover {
       background-color: #2a2a2a;
       transform: translateY(-2px);
@@ -59,21 +63,16 @@
     .link span {
       font-size: 1.2rem;
       flex-grow: 1;
-    }
-    .tip-container {
-      margin-top: 2.5rem;
-      width: 100%;
-      max-width: 400px;
       display: flex;
-      justify-content: center;
+      align-items: center;
     }
 
     @media (max-width: 480px) {
       h1 {
         font-size: 1.5rem;
       }
-      .link {
-        padding: 0.8rem;
+      .section-title {
+        font-size: 1.2rem;
       }
       .link img {
         width: 40px;
@@ -86,7 +85,16 @@
   </style>
 </head>
 <body>
-  <h1>📲 Descubre más</h1>
+  <h1>Support My Work 💸</h1>
+
+  <div class="tip-container">
+    <stripe-buy-button
+      buy-button-id="buy_btn_1RU6X3A9sQpZKoS8p65qMdsI"
+      publishable-key="pk_live_51RU5yWA9sQpZKoS8Q980PIy8g2q2biv0d0wBuZoTanoNoDCBTkl5WaSWbSsmvXN8i6srQIKtP2043lBHxBa0Ayjh00ljbCZ2xz">
+    </stripe-buy-button>
+  </div>
+
+  <div class="section-title">Follow & Order via Instagram</div>
 
   <a class="link" href="https://www.instagram.com/bloombite.rd?igsh=MXNtcWNhd3FwcnRocw==" target="_blank">
     <img src="bloombite.jpg" alt="Bloom Bite RD Logo" />
@@ -97,13 +105,6 @@
     <img src="cafeconcalvo.jpg" alt="Cafe con Calvo Logo" />
     <span>☕ Cafe con Calvo</span>
   </a>
-
-  <div class="tip-container">
-    <stripe-buy-button
-      buy-button-id="buy_btn_1RU6X3A9sQpZKoS8p65qMdsI"
-      publishable-key="pk_live_51RU5yWA9sQpZKoS8Q980PIy8g2q2biv0d0wBuZoTanoNoDCBTkl5WaSWbSsmvXN8i6srQIKtP2043lBHxBa0Ayjh00ljbCZ2xz">
-    </stripe-buy-button>
-  </div>
 
   <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 </body>
