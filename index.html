@@ -65,33 +65,32 @@
       align-items: center;
     }
 
-    .link {
-      display: flex;
-      flex-direction: column;       /* Stack image above text */
-      align-items: center;          /* Center both image and text */
-      justify-content: center;
-      background-color: #1e1e1e;
-      padding: 1rem;
-      margin: 0.5rem 0;
-      border-radius: 10px;
-      text-decoration: none;
-      color: #ffffff;
-      transition: background-color 0.3s, transform 0.2s;
-      width: 100%;
-      max-width: 400px;
-      text-align: center;
-    }
+.link {
+  display: flex;
+  align-items: center;       /* vertically center image and text */
+  justify-content: center;   /* horizontally center the whole link */
+  background-color: #1e1e1e;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #ffffff;
+  transition: background-color 0.3s, transform 0.2s;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;       /* centers text inside the flex */
+}
     .link:hover {
       background-color: #2a2a2a;
       transform: translateY(-2px);
     }
-    .link img {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      margin: 0 0 0.5rem 0; /* spacing below image */
-      flex-shrink: 0;
-    }
+.link img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 1rem;       /* keeps image on left with spacing */
+  flex-shrink: 0;
+}
     .link span {
       font-size: 1.2rem;
       display: flex;
